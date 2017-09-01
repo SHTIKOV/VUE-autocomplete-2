@@ -33,7 +33,7 @@
 						  	  <template v-for="(itemSearch, key) in search" v-if="itemSearch">
 								    <li v-model="itemSearch" @click="choseItem">{{ itemSearch }}</li>
 								  </template>
-								  <li v-if="visibleItemsSearch" class="message withItems">Показано {{ countSearch-1 }} из {{ countAll }} найденных городов. Уточните запрос, что бы увидеть остальные.</li>
+								  <li v-if="visibleItemsSearch" class="message withItems">Показано {{ countSearch }} из {{ countAll }} найденных городов. Уточните запрос, что бы увидеть остальные.</li>
 							  </ul>
 							  <ul class="items" v-if="!visibleItemsSearch">
 							  	<li class="message"><p>{{ messageNoResults }}</p></li>
