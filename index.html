@@ -4,36 +4,50 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>КОНТУР - тестовое задание</title>
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
 		<link rel="stylesheet" type="text/css" href="css/theme.css">
 	</head>
 	<body>
 
-		<div class="d2" id="app">
-		  <form>
-		  	<label>Город</label>
-			  <input v-model="message" type="text" placeholder="Введите или выберите из списка" @keyup="onClick">
-			  <button @click.prevent="revertVisible"></button>
-			  <ul class="items" v-if="messageIfError!==''">
-			  	<li class="message"><p>{{ messageIfError }}</p></li>
-			  	<li class="reload"><a href="" onclick="window.location.reload()">Обновить</a></li>
-			  </ul>
-			  	
-			  <div class="itemSearch" v-if="visible">
-				  <ul class="items" v-if="visibleItemsSearch">
-			  	  <template v-for="(itemSearch, key) in search" v-if="itemSearch">
-					    <li v-model="itemSearch" @click="choseItem">{{ itemSearch }}</li>
-					  </template>
-					  <li v-if="visibleItemsSearch" class="message withItems">Показано {{ countSearch-1 }} из {{ countAll }} найденных городов. Уточните запрос, что бы увидеть остальные.</li>
-				  </ul>
-				  <ul class="items" v-if="!visibleItemsSearch">
-				  	<li class="message"><p>{{ messageNoResults }}</p></li>
-				  </ul>
-			  </div>
-			</form>
+		<div class="vue-app" id="app">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="task-description">
+							<h1>Автокомплит</h1>
+						</div>
+					</div>
+					<div class="col-md-12">
+					  <form>
+					  	<label>Город</label>
+						  <input v-model="message" type="text" placeholder="Введите или выберите из списка" @keyup="performance">
+						  <button @click.prevent="revertVisible"></button>
+						  <ul class="items" v-if="messageIfError!==''">
+						  	<li class="message"><p>{{ messageIfError }}</p></li>
+						  	<li class="reload"><a href="" performance="window.location.reload()">Обновить</a></li>
+						  </ul>
+						  	
+						  <div class="itemSearch" v-if="visible">
+							  <ul class="items" v-if="visibleItemsSearch">
+						  	  <template v-for="(itemSearch, key) in search" v-if="itemSearch">
+								    <li v-model="itemSearch" @click="choseItem">{{ itemSearch }}</li>
+								  </template>
+								  <li v-if="visibleItemsSearch" class="message withItems">Показано {{ countSearch-1 }} из {{ countAll }} найденных городов. Уточните запрос, что бы увидеть остальные.</li>
+							  </ul>
+							  <ul class="items" v-if="!visibleItemsSearch">
+							  	<li class="message"><p>{{ messageNoResults }}</p></li>
+							  </ul>
+						  </div>
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<script type="text/javascript" src="js/kladr.json"></script>
 		<script src="js/jquery-1.7.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 		<script src="js/jquery.nicescroll.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 		<script src="js/brain.js"></script>

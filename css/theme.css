@@ -72,8 +72,10 @@ body{
   background: #fff;
   overflow: hidden;
 }
-
-div {padding: 30px 0}
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
 form {
   position: relative;
   width: 350px;
@@ -81,23 +83,26 @@ form {
   border-radius: 5px;
   z-index: 2;
 }
-
-.d2 {
-  background: rgba(0,0,0,0);
-  margin: 3% calc(50% - 151px);
-  width: 302px;
+p {
+  font: 14px “Segoe UI”;
+  color: #404040;
+  line-height: 20px;
 }
-.d2 button {
+#app {
+    margin: 20px 0px 20px 0px;
+}
+
+.vue-app button {
   border: none;
 }
-.d2 input {
+.vue-app input {
   border: 2px solid rgb(235, 235, 235);
   transition: all .3s;
 }
-.d2 input:focus {
+.vue-app input:focus {
   border: 2px solid rgb(78, 148, 212);
 }
-.d2 input {
+.vue-app input {
   width: 300px;
   height: 42px;
   background: #fff;
@@ -107,7 +112,7 @@ form {
   color: #404040;
   line-height: 20px;
 }
-.d2 button {
+.vue-app button {
   height: 26px;
   width: 26px;
   position: absolute;
@@ -117,7 +122,7 @@ form {
   cursor: pointer;
   padding: 0px;
 }
-.d2 button:before {
+.vue-app button:before {
   font-weight: bold;
   background: url(../icons/chevron-with-circle-down.svg) no-repeat 0px;
   width: auto;
