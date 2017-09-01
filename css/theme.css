@@ -1,0 +1,220 @@
+@font-face {
+    font-family: "SegoeUIRegular";
+    src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot");
+    src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/SegoeUIRegular/SegoeUIRegular.woff") format("woff"),
+    url("../fonts/SegoeUIRegular/SegoeUIRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SegoeUIBold";
+    src: url("../fonts/SegoeUIBold/SegoeUIBold.eot");
+    src: url("../fonts/SegoeUIBold/SegoeUIBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/SegoeUIBold/SegoeUIBold.woff") format("woff"),
+    url("../fonts/SegoeUIBold/SegoeUIBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SegoeUIItalic";
+    src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot");
+    src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/SegoeUIItalic/SegoeUIItalic.woff") format("woff"),
+    url("../fonts/SegoeUIItalic/SegoeUIItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SegoeUILight";
+    src: url("../fonts/SegoeUILight/SegoeUILight.eot");
+    src: url("../fonts/SegoeUILight/SegoeUILight.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/SegoeUILight/SegoeUILight.woff") format("woff"),
+    url("../fonts/SegoeUILight/SegoeUILight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SegoeUISemiBold";
+    src: url("../fonts/SegoeUISemiBold/SegoeUISemiBold.eot");
+    src: url("../fonts/SegoeUISemiBold/SegoeUISemiBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/SegoeUISemiBold/SegoeUISemiBold.woff") format("woff"),
+    url("../fonts/SegoeUISemiBold/SegoeUISemiBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+
+::-webkit-scrollbar-track-piece  {
+  background-color: #C2D2E4;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 30px;
+  background-color: #0A4C95;
+}
+
+
+
+* {box-sizing: border-box;}
+body{
+  margin: 0;
+  background: #fff;
+  overflow: hidden;
+}
+
+div {padding: 30px 0}
+form {
+  position: relative;
+  width: 350px;
+  margin: 0 auto;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.d2 {
+  background: rgba(0,0,0,0);
+  margin: 3% calc(50% - 151px);
+  width: 302px;
+}
+.d2 button {
+  border: none;
+}
+.d2 input {
+  border: 2px solid rgb(235, 235, 235);
+  transition: all .3s;
+}
+.d2 input:focus {
+  border: 2px solid rgb(78, 148, 212);
+}
+.d2 input {
+  width: 300px;
+  height: 42px;
+  background: #fff;
+  padding-left: 15px;
+  transition: all .3s;
+  font: 14px “Segoe UI”;
+  color: #404040;
+  line-height: 20px;
+}
+.d2 button {
+  height: 26px;
+  width: 26px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0,0,0,0);
+  cursor: pointer;
+  padding: 0px;
+}
+.d2 button:before {
+  font-weight: bold;
+  background: url(../icons/chevron-with-circle-down.svg) no-repeat 0px;
+  width: auto;
+  content: "fd";
+  color: rgba(0,0,0,0);
+  font-size: 20px;
+}
+.items {
+  overflow-y: auto;
+max-height: 300px;
+padding: 0px;
+margin: 1px 0px 0px 47px;
+width: 115%;
+border: solid 2px rgb(235, 235, 235);
+box-shadow: 0 5px 10px 2px rgba(221, 221, 221, 1);
+}
+.items li {
+  width: 100%;
+  height: 30px;
+  background: #fff;
+  transition: all .3s;
+  padding: 6px 0px 0px 15px;
+  font: 14px “Segoe UI”;
+  line-height: normal;
+  color: #404040;
+  line-height: 20px;
+}
+.active-li,
+.items li:hover {
+  background: rgb(78, 148, 212);
+color: #fff;
+cursor: pointer;
+font-weight: 900;
+padding: 7px 0px 4px 20px;
+}
+
+.nicescroll-rails div { 
+  background: red !important; 
+}  
+
+label {
+    color: #404040;
+    float: left;
+    margin: 9px 12px 9px 0px;
+    font: 14px “Segoe UI”;
+    cursor: auto;
+}
+.itemSearch {
+    padding: 0px;
+}
+.items .message {
+    height: auto;
+    color: #909090;
+}
+.items .reload {
+  width: 100%;
+  height: auto;
+  background: rgb(78, 148, 212);
+  transition: all .3s;
+  padding: 6px 0px 0px 15px;
+  font: 14px “Segoe UI”;
+  line-height: normal;
+  color: #404040;
+  line-height: 20px;
+  color: #fff;
+}
+.items .reload:hover {
+  width: 100%;
+  height: auto;
+  background: rgba(78, 148, 212, .5);
+  transition: all .3s;
+  padding: 6px 0px 0px 15px;
+  font: 14px “Segoe UI”;
+  line-height: normal;
+  color: #404040;
+  line-height: 20px;
+  color: #fff;
+}
+.items .message:hover {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  transition: all .3s;
+  padding: 6px 0px 0px 15px;
+  font: 14px “Segoe UI”;
+  line-height: normal;
+  color: #404040;
+  line-height: 20px;
+}
+.items .reload a {
+    text-decoration: none;
+    color: #fff;
+}
+.items .withItems:hover,
+.items .withItems {
+  font-size: 14px;
+  padding: 14px;
+  cursor: auto;
+  color: #909090;
+}
