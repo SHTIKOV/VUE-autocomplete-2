@@ -24,7 +24,7 @@ $(function(){
      * -- json               - json код данных
      * -- data               - Полный массив данных
      * -- i                  - Ключ итерации
-     * -- message            - Текст с сообщением
+     * -- message            - Текст в поиске
      * -- messageIfError     - Сообщение об ошибке
      * -- messageNoResults   - Сообщение о пустом результате
      * -- search             - Массив с отобранными данными
@@ -44,6 +44,8 @@ $(function(){
       el: "#app",
       data: {
         json: window.json,
+
+        inputStatus: 0,
 
         message: '',
         messageIfError: '',
@@ -67,7 +69,8 @@ $(function(){
         }
       },
       methods: {
-        performance: function() {
+        performance: function(button = 'click') {
+          navigation(button);
 
           /*
            * --- Начало кода ---
@@ -76,7 +79,7 @@ $(function(){
            * @variables
            * -- data    - полный массив данных
            * -- i       - ключ итерации
-           * -- message - текст с сообщением
+           * -- message - текст в поиске
            * -- query_array - массив с отобранными данными
            */
           this.countSearch = 0;
@@ -86,11 +89,13 @@ $(function(){
           this.countAll = data.length;
 
           for (var i = 0; i < data.length; i++) {
-            
             if (~data[i].City.indexOf(message)) {
               if (data[i].City !== '') {
                 this.countSearch++;
-                query_array[i] = data[i].City;
+                query_array[i] = {
+                  'city': data[i].City,
+                  'key': this.countSearch,
+                };
               }
             }
             
@@ -101,6 +106,9 @@ $(function(){
              * выводится сообщение "Ничег оне найдено"
              */
             if (query_array.length == 0) {
+              if (message.length !== 0) {
+                this.inputStatus = 2;
+              }
               this.visibleMessage = true;
               this.visibleItemsSearch = false;
               this.messageNoResults = 'Ничего не найдено';
@@ -135,9 +143,33 @@ $(function(){
         },
         revertVisible: function() {
           this.visible = !this.visible;
+        },
+        openItems: function(button) {
+          if (this.visible == false) {
+            this.visible = true;
+          }
+          this.performance();
         }
       }
     });
+  }
+
+  function navigation(button) {
+    if (button == 'click') {return true;}
+    var activeItem = $('.items .active');
+    if (button.key == 'ArrowUp') {
+      $('.items').animate({ scrollTop: activeItem[0].offsetTop-130 }, 150);
+      if ($('.items li').first().attr('class') !== 'active') {
+        activeItem.removeClass('active');
+        activeItem.prev().addClass('active');
+      }
+    } else if (button.key == 'ArrowDown') {
+      $('.items').animate({ scrollTop: activeItem[0].offsetTop-130 }, 150);
+      if ($('.items li').last().prev().attr('class') !== 'active') {
+        activeItem.removeClass('active');
+        activeItem.next().addClass('active');
+      }
+    }
   }
 
 });
