@@ -223,3 +223,15 @@ label {
   cursor: auto;
   color: #909090;
 }
+.errorRed input {
+  border: 2px solid red !important;
+}
+.errorRed .message p {
+  color: red;
+}
+.items .active {
+  background: rgb(78, 128, 212);
+}
+input.activeInput {
+  border: 2px solid rgb(78, 148, 212);
+}
