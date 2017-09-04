@@ -70,7 +70,16 @@ $(function(){
       },
       methods: {
         performance: function(button = 'click') {
+
           navigation(button);
+
+          /*
+           * Если нажат Enter выбирается активный пункт 
+           * из посказки и за тем скрывается подсказка
+           */
+          if (button.key == 'Enter') {
+            this.message = $('.itemSearch ul.items .active')[0].innerText;
+          }
 
           /*
            * --- Начало кода ---
@@ -117,7 +126,6 @@ $(function(){
               this.visibleMessage = false;
               this.messageNoResults = '';
             }
-
           }
           /* --- Конец кода -- */
 
@@ -144,11 +152,16 @@ $(function(){
         revertVisible: function() {
           this.visible = !this.visible;
         },
-        openItems: function(button) {
+        closeVisible: function() {
+          if (this.visible == true) {
+            this.visible = false;
+          }
+        },
+        openItems: function() {
           if (this.visible == false) {
             this.visible = true;
+            this.performance();
           }
-          this.performance();
         }
       }
     });
@@ -156,14 +169,15 @@ $(function(){
 
   function navigation(button) {
     if (button == 'click') {return true;}
-    var activeItem = $('.items .active');
+    var activeItem = $('.itemSearch ul.items .active');
     if (button.key == 'ArrowUp') {
       $('.items').animate({ scrollTop: activeItem[0].offsetTop-130 }, 150);
       if ($('.items li').first().attr('class') !== 'active') {
         activeItem.removeClass('active');
         activeItem.prev().addClass('active');
       }
-    } else if (button.key == 'ArrowDown') {
+    }
+    if (button.key == 'ArrowDown') {
       $('.items').animate({ scrollTop: activeItem[0].offsetTop-130 }, 150);
       if ($('.items li').last().prev().attr('class') !== 'active') {
         activeItem.removeClass('active');

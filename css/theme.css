@@ -1,51 +1,58 @@
 @font-face {
-    font-family: "SegoeUIRegular";
-    src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot");
-    src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/SegoeUIRegular/SegoeUIRegular.woff") format("woff"),
-    url("../fonts/SegoeUIRegular/SegoeUIRegular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
+  font-family: "SegoeUIRegular";
+  src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot");
+  src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/SegoeUIRegular/SegoeUIRegular.woff") format("woff"),
+  url("../fonts/SegoeUIRegular/SegoeUIRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
 
 @font-face {
-    font-family: "SegoeUIBold";
-    src: url("../fonts/SegoeUIBold/SegoeUIBold.eot");
-    src: url("../fonts/SegoeUIBold/SegoeUIBold.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/SegoeUIBold/SegoeUIBold.woff") format("woff"),
-    url("../fonts/SegoeUIBold/SegoeUIBold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
+  font-family: "SegoeUIBold";
+  src: url("../fonts/SegoeUIBold/SegoeUIBold.eot");
+  src: url("../fonts/SegoeUIBold/SegoeUIBold.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/SegoeUIBold/SegoeUIBold.woff") format("woff"),
+  url("../fonts/SegoeUIBold/SegoeUIBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
 
 @font-face {
-    font-family: "SegoeUIItalic";
-    src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot");
-    src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/SegoeUIItalic/SegoeUIItalic.woff") format("woff"),
-    url("../fonts/SegoeUIItalic/SegoeUIItalic.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
+  font-family: "SegoeUIItalic";
+  src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot");
+  src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/SegoeUIItalic/SegoeUIItalic.woff") format("woff"),
+  url("../fonts/SegoeUIItalic/SegoeUIItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
 
 @font-face {
-    font-family: "SegoeUILight";
-    src: url("../fonts/SegoeUILight/SegoeUILight.eot");
-    src: url("../fonts/SegoeUILight/SegoeUILight.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/SegoeUILight/SegoeUILight.woff") format("woff"),
-    url("../fonts/SegoeUILight/SegoeUILight.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
+  font-family: "SegoeUILight";
+  src: url("../fonts/SegoeUILight/SegoeUILight.eot");
+  src: url("../fonts/SegoeUILight/SegoeUILight.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/SegoeUILight/SegoeUILight.woff") format("woff"),
+  url("../fonts/SegoeUILight/SegoeUILight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
 
 @font-face {
-    font-family: "SegoeUISemiBold";
-    src: url("../fonts/SegoeUISemiBold/SegoeUISemiBold.eot");
-    src: url("../fonts/SegoeUISemiBold/SegoeUISemiBold.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/SegoeUISemiBold/SegoeUISemiBold.woff") format("woff"),
-    url("../fonts/SegoeUISemiBold/SegoeUISemiBold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
+  font-family: "SegoeUISemiBold";
+  src: url("../fonts/SegoeUISemiBold/SegoeUISemiBold.eot");
+  src: url("../fonts/SegoeUISemiBold/SegoeUISemiBold.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/SegoeUISemiBold/SegoeUISemiBold.woff") format("woff"),
+  url("../fonts/SegoeUISemiBold/SegoeUISemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'konturIconic';
+  src: url('../fonts/kontur-iconic-eco-webfont.eot?')  format('eot'),
+  url('../fonts/kontur-iconic-eco-webfont.woff') format('woff');
+  font-style: normal;
 }
 
 
@@ -54,17 +61,13 @@
   width: 15px;
   height: 15px;
 }
-
 ::-webkit-scrollbar-track-piece  {
   background-color: #C2D2E4;
 }
-
 ::-webkit-scrollbar-thumb:vertical {
   height: 30px;
   background-color: #0A4C95;
 }
-
-
 
 * {box-sizing: border-box;}
 body{
@@ -89,7 +92,7 @@ p {
   line-height: 20px;
 }
 #app {
-    margin: 20px 0px 20px 0px;
+  margin: 20px 0px 20px 0px;
 }
 
 .vue-app button {
@@ -113,31 +116,29 @@ p {
   line-height: 20px;
 }
 .vue-app button {
-  height: 26px;
-  width: 26px;
+  height: 42px;
+  width: 42px;
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 30px;
+  right: 3px;
   background: rgba(0,0,0,0);
   cursor: pointer;
   padding: 0px;
 }
 .vue-app button:before {
   font-weight: bold;
-  background: url(../icons/chevron-with-circle-down.svg) no-repeat 0px;
   width: auto;
-  content: "fd";
-  color: rgba(0,0,0,0);
-  font-size: 20px;
+  font-family: "konturIconic";
+  content: "";
 }
 .items {
   overflow-y: auto;
-max-height: 300px;
-padding: 0px;
-margin: 1px 0px 0px 47px;
-width: 115%;
-border: solid 2px rgb(235, 235, 235);
-box-shadow: 0 5px 10px 2px rgba(221, 221, 221, 1);
+  max-height: 300px;
+  padding: 0px;
+  margin: 1px 0px 0px 47px;
+  width: 115%;
+  border: solid 2px rgb(235, 235, 235);
+  box-shadow: 0 5px 10px 2px rgba(221, 221, 221, 1);
 }
 .items li {
   width: 100%;
@@ -153,10 +154,10 @@ box-shadow: 0 5px 10px 2px rgba(221, 221, 221, 1);
 .active-li,
 .items li:hover {
   background: rgb(78, 148, 212);
-color: #fff;
-cursor: pointer;
-font-weight: 900;
-padding: 7px 0px 4px 20px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 900;
+  padding: 7px 0px 4px 20px;
 }
 
 .nicescroll-rails div { 
@@ -164,18 +165,18 @@ padding: 7px 0px 4px 20px;
 }  
 
 label {
-    color: #404040;
-    float: left;
-    margin: 9px 12px 9px 0px;
-    font: 14px “Segoe UI”;
-    cursor: auto;
+  color: #404040;
+  float: left;
+  margin: 9px 12px 9px 0px;
+  font: 14px “Segoe UI”;
+  cursor: auto;
 }
 .itemSearch {
-    padding: 0px;
+  padding: 0px;
 }
 .items .message {
-    height: auto;
-    color: #909090;
+  height: auto;
+  color: #909090;
 }
 .items .reload {
   width: 100%;
@@ -213,8 +214,8 @@ label {
   line-height: 20px;
 }
 .items .reload a {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 .items .withItems:hover,
 .items .withItems {
@@ -234,4 +235,9 @@ label {
 }
 input.activeInput {
   border: 2px solid rgb(78, 148, 212);
+}
+#search {
+  width: 350px;
+  margin: 0 auto;
+  position: relative;
 }

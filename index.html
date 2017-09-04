@@ -19,9 +19,9 @@
 						</div>
 					</div>
 					<div class="col-md-12">
-					  <form v-bind:class="{ errorRed: !visibleItemsSearch && message!=='' }">
+					  <div v-bind:class="{ errorRed: !visibleItemsSearch && message!=='' }" onsubmit="return false;" id="search">
 					  	<label>Город</label>
-						  <input v-model="message" v-bind:class="{ activeInput: visible }" type="text" placeholder="Введите или выберите из списка" @keyup="performance" @click="openItems">
+						  <input v-model="message" v-bind:class="{ activeInput: visible }" type="text" placeholder="Введите или выберите из списка" @keyup.prevent="performance" @click="openItems">
 						  <button @click.prevent="revertVisible"></button>
 						  <ul class="items" v-if="messageIfError!==''">
 						  	<li class="message"><p>{{ messageIfError }}</p></li>
@@ -31,7 +31,7 @@
 						  <div class="itemSearch" v-if="visible">
 							  <ul class="items" v-if="visibleItemsSearch">
 						  	  <template v-for="(itemSearch, key) in search" v-if="itemSearch">
-								    <li v-model="itemSearch" v-bind:class="{ active: itemSearch.key==1 }" @click="choseItem">{{ itemSearch.city }}</li>
+								    <li v-model="itemSearch" v-bind:class="{ active: itemSearch.key==1 }" @click="choseItem" @keyup.13="choseItem">{{ itemSearch.city }}</li>
 								  </template>
 								  <li v-if="visibleItemsSearch" class="message withItems">Показано {{ countSearch }} из {{ countAll }} найденных городов. Уточните запрос, что бы увидеть остальные.</li>
 							  </ul>
@@ -39,17 +39,16 @@
 							  	<li class="message"><p>{{ messageNoResults }}</p></li>
 							  </ul>
 						  </div>
-						</form>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<script type="text/javascript" src="js/kladr.json"></script>
-		<script src="js/jquery-1.7.1.min.js"></script>
-		<!-- <script src="js/bootstrap.min.js"></script> -->
+		<script src="js/jquery-2.0.0.min.js"></script>
 		<script src="js/jquery.nicescroll.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="js/vue.min.js"></script>
 		<script src="js/brain.js"></script>
 	</body>
 </html>
