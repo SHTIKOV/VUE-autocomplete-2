@@ -1,4 +1,4 @@
-# VUE-autocomplate
+# VUE-autocomplete
 
 Hello everyone!
 
