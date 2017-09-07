@@ -164,6 +164,7 @@ axios.get('js/kladr.json')
   function navigation(button) {
     if (button == 'click') {return true;}
 
+    var wrapdiv = domSelector('.itemSearch ul.items')[0];
     var prevItem = domSelectorPrev('.itemSearch ul.items .active');
     var activeItem = domSelector('.itemSearch ul.items .active');
     var nextItem = domSelectorNext('.itemSearch ul.items .active');
@@ -171,12 +172,14 @@ axios.get('js/kladr.json')
 
     if (button.key == 'ArrowUp') {
       if (firstElement.className !== 'active') {
+        wrapdiv.scrollTop = nextItem.offsetTop - 150;
         removeClass(activeItem, 'active');
         addClass(prevItem, 'active');
       }
     }
     if (button.key == 'ArrowDown') {
       if (nextItem.classList[0] !== 'message') {
+        wrapdiv.scrollTop = nextItem.offsetTop - 150;
         removeClass(activeItem, 'active');
         addClass(nextItem, 'active');
       }
